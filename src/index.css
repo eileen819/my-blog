@@ -143,16 +143,25 @@ footer a:hover {
   color: gray;
 }
 
-.post__delete:hover,
-.post__delete:focus {
-  color: black;
+.post__delete,
+.post__edit {
   cursor: pointer;
 }
 
-.post__edit:hover,
-.post__edit:focus {
+.post__edit a {
+  color: gray;
+}
+
+.post__delete:hover,
+.post__delete:focus {
   color: black;
-  cursor: pointer;
+}
+
+.post__edit:hover,
+.post__edit:focus,
+.post__edit a:hover,
+.post__edit a:focus {
+  color: black;
 }
 
 /* Post Detail */
@@ -327,6 +336,7 @@ ul.carousel__slides input {
   background-color: #fff;
   opacity: 0.3;
   margin: 10px;
+  cursor: pointer;
 }
 
 input:checked + .carousel__slide-container .carousel__slide-img {
@@ -349,3 +359,58 @@ input#img_03:checked ~ .carousel__dots label#img-dot-3 {
 /* input:checked + .carousel__slide-container .nav label {
   display: block;
 } */
+
+/* Form */
+.form {
+  padding: 20px;
+  /* margin-top: 20px; */
+}
+
+.form input {
+  height: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 0.3rem;
+  border: 1px solid lightgray;
+  width: 96%;
+}
+
+.form textarea {
+  min-height: 400px;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+  border: 1px solid lightgray;
+  width: 96%;
+}
+
+.form .form__block {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 10px;
+  /* margin-top: 20px; */
+}
+
+.form .form__btn--submit {
+  /* width: 100%; */
+  width: 96%;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px;
+  /* float: right; */
+  cursor: pointer;
+  background-color: #2563eb;
+  color: white;
+}
+
+.form .form__btn--submit:hover,
+.form .form__btn--submit:focus {
+  background-color: #1945a4;
+}
