@@ -1,3 +1,9 @@
+import LoginForm from "components/LoginForm";
+
 export default function LoginPage() {
-  return <h1>LoginPage Page</h1>;
+  return (
+    <div className="inner">
+      <LoginForm />
+    </div>
+  );
 }
