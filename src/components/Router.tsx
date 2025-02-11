@@ -7,12 +7,12 @@ import PostEdit from "pages/posts/edit";
 import ProfilePage from "pages/profile";
 import LoginPage from "pages/login";
 import SignupPage from "pages/signup";
-import { useState } from "react";
 
-function Router() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  // firebase Auth가 인증되었으면 true로 변경해주는 로직 추가
+interface IRouterProps {
+  isAuthenticated: boolean;
+}
 
+function Router({ isAuthenticated }: IRouterProps) {
   return (
     <Routes>
       {isAuthenticated ? (

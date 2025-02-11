@@ -235,7 +235,7 @@ footer a:hover {
 .carousel {
   margin: 0 auto;
   max-width: 980px;
-  margin-top: 36px;
+  /* margin-top: 36px; */
 }
 
 ul.carousel__slides {
@@ -375,6 +375,10 @@ input#img_03:checked ~ .carousel__dots label#img-dot-3 {
   width: 96%;
 }
 
+.form .form__input {
+  padding: 15px;
+}
+
 .form textarea {
   min-height: 400px;
   padding: 10px;
@@ -437,4 +441,8 @@ input#img_03:checked ~ .carousel__dots label#img-dot-3 {
 .form__link:hover,
 .form__link:focus {
   color: #1945a4;
+}
+
+.form__error {
+  color: red;
 }

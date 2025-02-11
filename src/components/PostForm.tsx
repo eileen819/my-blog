@@ -3,11 +3,23 @@ export default function PostForm() {
     <form action="/post" method="POST" className="form">
       <div className="form__block">
         <label htmlFor="title">제목</label>
-        <input type="text" name="title" id="title" required />
+        <input
+          type="text"
+          name="title"
+          id="title"
+          className="form__input"
+          required
+        />
       </div>
       <div className="form__block">
         <label htmlFor="summary">요약</label>
-        <input type="text" name="summary" id="summary" required />
+        <input
+          type="text"
+          name="summary"
+          id="summary"
+          className="form__input"
+          required
+        />
       </div>
       <div className="form__block">
         <label htmlFor="content">내용</label>
