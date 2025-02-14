@@ -223,11 +223,13 @@ footer a:hover {
 .profile__logout {
   color: gray;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .profile__logout:hover,
 .profile__logout:active {
   color: black;
+  text-decoration: underline;
 }
 
 /* Carousel */
@@ -445,4 +447,35 @@ input#img_03:checked ~ .carousel__dots label#img-dot-3 {
 
 .form__error {
   color: red;
+}
+
+/* loader */
+.loader__wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+.loader__wrap .loader {
+  width: 48px;
+  height: 48px;
+  /* position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto; */
+  border: 5px solid #ccc;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

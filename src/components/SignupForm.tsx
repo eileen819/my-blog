@@ -63,10 +63,11 @@ export default function SignupForm() {
 
   return (
     <form onSubmit={onSubmit} className="form form--lg">
-      <h1 className="form__title">로그인</h1>
+      <h1 className="form__title">회원가입</h1>
       <div className="form__block">
         <label htmlFor="email">이메일</label>
         <input
+          value={email}
           type="email"
           name="email"
           id="email"
@@ -78,6 +79,7 @@ export default function SignupForm() {
       <div className="form__block">
         <label htmlFor="password">비밀번호</label>
         <input
+          value={password}
           type="password"
           name="password"
           id="password"
@@ -89,6 +91,7 @@ export default function SignupForm() {
       <div className="form__block">
         <label htmlFor="password_confirm">비밀번호 확인</label>
         <input
+          value={passwordConfirm}
           type="password"
           name="password_confirm"
           id="password_confirm"

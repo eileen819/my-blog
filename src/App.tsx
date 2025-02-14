@@ -2,18 +2,32 @@ import { BrowserRouter } from "react-router-dom";
 import Footer from "components/Footer";
 import Header from "components/Header";
 import Router from "components/Router";
-import { useState } from "react";
-import { getAuth } from "firebase/auth";
+import { useEffect, useState } from "react";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 import app from "firebaseApp";
 import { ToastContainer } from "react-toastify";
+import Loader from "components/Loader";
 
 function App() {
-  const auth = getAuth(app);
-  console.log(auth);
-  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(
-    !!auth?.currentUser
-  );
-  // firebase Auth가 인증되었으면 true로 변경해주는 로직 추가
+  // auth를 가져오기 전에 loader를 띄워주는 용도
+  const [isLoading, setIsLoading] = useState(true);
+  // auth의 currentUser가 있으면 isAuthenticated의 변경이 이루어지도록 함
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+
+  // 로그인 여부에 따라 라우팅 화면이 변경될 수 있도록 함
+  useEffect(() => {
+    const auth = getAuth(app);
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setIsAuthenticated(true);
+      } else {
+        setIsAuthenticated(false);
+      }
+      setIsLoading(false);
+    });
+
+    return () => unsubscribe();
+  }, []);
 
   return (
     <>
@@ -21,7 +35,11 @@ function App() {
       <BrowserRouter>
         <Header />
         <main>
-          <Router isAuthenticated={isAuthenticated} />
+          {isLoading ? (
+            <Loader />
+          ) : (
+            <Router isAuthenticated={isAuthenticated} />
+          )}
         </main>
         <Footer />
       </BrowserRouter>

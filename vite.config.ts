@@ -11,6 +11,7 @@ export default defineConfig({
       pages: "/src/pages",
       styles: "/src/styles",
       firebaseApp: "/src/firebaseApp",
+      context: "/src/context",
     },
   },
 });
