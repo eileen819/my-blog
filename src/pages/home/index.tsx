@@ -6,6 +6,7 @@ type TabType = "all" | "my";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<TabType>("all");
+
   return (
     <>
       <Carousel />
