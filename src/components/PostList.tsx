@@ -4,7 +4,7 @@ import { db } from "firebaseApp";
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-interface IPostProps {
+export interface IPostProps {
   id: string;
   title: string;
   email: string;
@@ -45,7 +45,7 @@ export default function PostList() {
                 <div className="post__date">{post?.createdAt}</div>
               </div>
               <div className="post__title">{post?.title}</div>
-              <div className="post__text">{post?.content}</div>
+              <div className="post__text">{post?.summary}</div>
             </Link>
             {post?.email === user?.email && (
               <div className="post__utils-box">
