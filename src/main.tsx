@@ -4,9 +4,12 @@ import App from "./App.tsx";
 import "styles/reset.css";
 import "./index.css";
 import { AuthContextProvider } from "context/AuthContext.tsx";
+import { ThemeContextProvider } from "context/\bThemeContext.tsx";
 
 createRoot(document.getElementById("root")!).render(
-  <AuthContextProvider>
-    <App />
-  </AuthContextProvider>
+  <ThemeContextProvider>
+    <AuthContextProvider>
+      <App />
+    </AuthContextProvider>
+  </ThemeContextProvider>
 );

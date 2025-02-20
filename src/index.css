@@ -67,6 +67,12 @@ footer a:hover {
   color: black;
 }
 
+footer .footer__theme-btn {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
 /* Post Navigation */
 .post__navigation {
   display: flex;
@@ -141,7 +147,7 @@ footer a:hover {
   margin: 14px 0px;
 }
 
-.post__text {
+.post__summary {
   color: dimgray;
   font-size: 16px;
 }
@@ -190,7 +196,7 @@ footer a:hover {
 .post__detail .post__utils-box {
   padding: 10px 0px;
   border-top: 1px solid #f2f2f2;
-  border-bottom: 1px solid #f2f2f2;
+  /* border-bottom: 1px solid #f2f2f2; */
   /* flex-direction: row; */
 }
 
@@ -200,6 +206,7 @@ footer a:hover {
 
 .post__detail .post__text {
   padding: 20px 0px;
+  border-top: 1px solid #f2f2f2;
 }
 
 .post__detail .post__category {
@@ -518,4 +525,65 @@ input#img_03:checked ~ .carousel__dots label#img-dot-3 {
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Light mode */
+.white {
+  transition: all 0.25s linear;
+  background-color: white;
+}
+
+/* Dark mode */
+.dark {
+  transition: all 0.25s linear;
+  background-color: #1e2937;
+}
+
+.dark .post__navigation {
+  color: #ecf0f1;
+}
+
+.dark .post__text,
+.dark .post__profile-box .post__author-name,
+.dark .post__profile-box .post__date {
+  color: #bdc3c7;
+}
+/* 
+.dark .post__utils-box .post__edit a {
+  color: #ecf0f1;
+} */
+
+.dark a,
+.dark .form label,
+.dark .profile__logout,
+.dark .post__delete,
+.dark .form__title,
+.dark .post__navigation--active,
+.dark .post__title,
+/* .dark .post__author-name, */
+.dark .footer__theme-btn,
+.dark .profile__email,
+.dark .profile__name,
+.dark .post__no-post,
+.dark .my-post-nav {
+  color: white;
+}
+
+.dark a:hover,
+.dark a:focus,
+.dark .post__edit:hover,
+.dark .post__delete:hover,
+.dark .post__summary,
+.dark .post__text--pre-wrap,
+.dark .form__block {
+  color: lightgray;
+}
+
+.dark .form__error {
+  color: #ff6a71;
+}
+
+.dark footer,
+.dark header {
+  background-color: #111827;
 }

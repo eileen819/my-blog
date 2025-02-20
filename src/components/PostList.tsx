@@ -49,7 +49,6 @@ export default function PostList({
   const [activeTab, setActiveTab] = useState<TabType | CategoryType>(
     defaultTab
   );
-  console.log(activeTab);
   const onDelete = async (id: string) => {
     const confirm = window.confirm("해당 게시글을 삭제하겠습니까?");
     if (confirm && id) {
@@ -111,7 +110,7 @@ export default function PostList({
                   <div className="post__date">{post?.createdAt}</div>
                 </div>
                 <div className="post__title">{post?.title}</div>
-                <div className="post__text">{post?.summary}</div>
+                <div className="post__summary">{post?.summary}</div>
               </Link>
               {post?.email === user?.email && (
                 <div className="post__utils-box">
