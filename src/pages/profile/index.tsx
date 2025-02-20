@@ -5,7 +5,8 @@ export default function ProfilePage() {
   return (
     <div className="inner">
       <Profile />
-      <PostList />
+      <h1 className="my-post-nav">나의 글</h1>
+      <PostList hasNavigation={false} defaultTab="my" />
     </div>
   );
 }

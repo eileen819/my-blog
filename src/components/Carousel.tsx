@@ -31,7 +31,6 @@ export default function Carousel() {
   const [activeImage, setActiveImage] = useState(1);
   const onPrev = () => setActiveImage((prev) => (prev === 1 ? 3 : prev - 1));
   const onNext = () => setActiveImage((prev) => (prev === 3 ? 1 : prev + 1));
-  console.log(activeImage);
 
   return (
     <div className="carousel">

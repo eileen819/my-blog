@@ -83,6 +83,12 @@ footer a:hover {
   font-weight: 600;
 }
 
+.my-post-nav {
+  padding: 20px;
+  font-weight: 600;
+  border-bottom: 1px solid #f2f2f2;
+}
+
 /* Post List, Post Detail */
 .post__list,
 .post__detail {
@@ -177,13 +183,15 @@ footer a:hover {
 .post__detail .post__title {
   font-size: 36px;
   line-height: 40px;
+  display: flex;
+  align-items: end;
 }
 
 .post__detail .post__utils-box {
   padding: 10px 0px;
   border-top: 1px solid #f2f2f2;
   border-bottom: 1px solid #f2f2f2;
-  flex-direction: row;
+  /* flex-direction: row; */
 }
 
 .post__detail .post__profile-box {
@@ -192,6 +200,21 @@ footer a:hover {
 
 .post__detail .post__text {
   padding: 20px 0px;
+}
+
+.post__detail .post__category {
+  width: 80px;
+  max-height: 25px;
+  color: gray;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  background: #f2f2f2;
+  padding: 0px 5px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
 }
 
 /* Profile */
@@ -456,6 +479,14 @@ input#img_03:checked ~ .carousel__dots label#img-dot-3 {
 
 .form__error {
   color: red;
+}
+
+.form select {
+  border: 1px solid lightgray;
+  border-radius: 0.3rem;
+  max-width: 680px;
+  height: 30px;
+  padding: 0px 20px;
 }
 
 /* loader */
