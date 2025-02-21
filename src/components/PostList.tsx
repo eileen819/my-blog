@@ -23,6 +23,13 @@ export const CATEGORIES: CategoryType[] = [
 ];
 
 export type TabType = "all" | "my";
+
+export interface IComments {
+  content: string;
+  uid: string;
+  email: string;
+  createdAt: string;
+}
 export interface IPostProps {
   id: string;
   title: string;
@@ -33,6 +40,7 @@ export interface IPostProps {
   updatedAt: string;
   uid: string;
   category?: CategoryType;
+  comments: IComments[];
 }
 
 interface IPostListProps {
