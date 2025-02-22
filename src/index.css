@@ -669,8 +669,8 @@ input#img_03:checked ~ .carousel__dots label#img-dot-3 {
   color: #bdc3c7;
 }
 
-.comment__box .comment__profile-box .comment__delete:hover,
-.comment__box .comment__profile-box .comment__delete:focus {
+.dark .comment__box .comment__profile-box .comment__delete:hover,
+.dark .comment__box .comment__profile-box .comment__delete:focus {
   color: white;
 }
 
